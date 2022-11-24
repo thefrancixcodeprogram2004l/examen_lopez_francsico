@@ -2,7 +2,7 @@
 
 float Linea::getDistancia() const
 {
-    return x->getX();
+    return sqrt(pow((x->getX()-y->getX()),2)+pow((x->getY()-y->getY()),2)) ;
 }
 
 Punto *Linea::getX() const
@@ -17,11 +17,19 @@ Punto *Linea::getY() const
 
 string Linea::ver()
 {
-    return "";
+    return "diatancia"+to_string(this->getDistancia())+"\n"+
+            "pendiente: "+to_string(this->getPendiente())+"\n";
+}
+
+float Linea::getPendiente() const
+{
+    return x->getY()-y->getY()/x->getX()-y->getX();
 }
 
 Linea::Linea()
 {
+    this->x=new Punto(-7,4);
+    this->y=new Punto(2,9);
 
 }
 

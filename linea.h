@@ -3,6 +3,7 @@
 #include<iostream>
 #include<stack>
 #include"punto.h"
+#include<math.h>
 #define capacidad 2
 using namespace std;
 class Linea
@@ -20,6 +21,7 @@ public:
     Punto *getX() const;
     Punto *getY() const;
     string ver();
+    float getPendiente() const;
 };
 
 #endif // LINEA_H
