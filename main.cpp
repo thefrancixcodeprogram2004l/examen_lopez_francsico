@@ -7,10 +7,17 @@
 #include <iostream>
 
 using namespace std;
-
+#include"punto.h"
 int main()
 {
     cout<<"Francisco Lopez\n";
+    Punto p1(2,5);
+    Punto p2(3,7);
+    cout<<"Punto 1\n";
+    cout<<p1.ver()<<endl;
+    cout<<"Punto2\n";
+    cout<<p2.ver()<<endl;
+
 
     return 0;
 }
